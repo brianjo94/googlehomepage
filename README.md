@@ -12,4 +12,3 @@ Store patient information that they added
 
 **Database aspect(Using SQLlite):**
 Store patient information that they added
-
