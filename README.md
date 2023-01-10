@@ -12,3 +12,13 @@ Store patient information that they added
 
 **Database aspect(Using SQLlite):**
 Store patient information that they added
+
+**Installation**
+1. Clone this repository: git@github.com:brianjo94/HospitalEmergeNameEntry.git
+2. cd into HospitalEmergeNameEntry
+3. Install virtual environment by running pip3 install virtualenv
+4. Run virtualenv using run virtualenv env(name of virtualenvironment you wish)
+5. To activate virtual environment, run source env/bin/activate
+6. Install django by pip3 install django
+7. To run the server: python3 manage.py runsever
+
