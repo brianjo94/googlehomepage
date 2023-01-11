@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Hospital</a>
+          <a class="navbar-brand" href="{% url 'patients:homepage' %}">Hospital</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -22,7 +22,7 @@
                 <a class="nav-link active" aria-current="page" href="{% url 'patients:homepage' %}">Homepage</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+                <a class="nav-link" href="{% url 'patients:registered' %}">Registered</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Check Queue</a>
@@ -32,8 +32,7 @@
           </div>
         </div>
       </nav>
-
+      {% block content %}
+      {% endblock content %}
 </body>
 </html>
-{% block content %}
-{% endblock content %}

@@ -1,6 +1,6 @@
-{% extends "patients/base.html" %}
+{% extends 'patients/base.html' %}
 
-{% block content %} 
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +12,18 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <h1>Registered Patients</h1>
+
+    {% for first_name in name %}
+        <ul>
+            <li>{{first_name}}</li>
+        </ul>
+    {% endfor %}
     
 </body>
 </html>
-<h1 class="header">Fill out the information below to register</h1>
 
-<p>First name</p>
-<p>Last name</p>
 
-<button>Submit</button>
 
 
 {% endblock content %}
