@@ -1,5 +1,5 @@
 {% extends "patients/base.html" %}
-
+{% load static %}
 {% block content %} 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,19 +8,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
+
 <body>
-    
+    <h1 class="header">Fill out the information below to register</h1>
+  
+
+<div class="containers" >
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit">
+</div>
+    </form>
 </body>
 </html>
-<h1 class="header">Fill out the information below to register</h1>
 
-<p>First name</p>
-<p>Last name</p>
-
-<button>Submit</button>
 
 
 {% endblock content %}
