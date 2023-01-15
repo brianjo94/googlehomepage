@@ -1,0 +1,20 @@
+
+body {
+    background-color:honeydew;
+}
+
+.header {
+    text-align: center;
+    margin: auto 50px;
+    font-size: 50px;
+
+}
+
+.containers {
+    display: flex;
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+
+}

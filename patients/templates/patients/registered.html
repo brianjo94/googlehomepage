@@ -1,6 +1,6 @@
-{% extends "patients/base.html" %}
-{% load static %}
-{% block content %} 
+{% extends 'patients/base.html' %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,23 +8,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-
-
 <body>
-    <h1 class="header">Fill out the information below to register</h1>
-  
+    <h1>Registered Patients</h1>
 
-<div class="containers" >
-    <form method="POST">
-        {% csrf_token %}
-        {{form}}
-        <input type="submit">
-</div>
-    </form>
+    {% for first_name in name %}
+        <ul>
+            <li>{{first_name}}</li>
+        </ul>
+    {% endfor %}
+    
 </body>
 </html>
+
 
 
 
